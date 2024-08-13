@@ -54,5 +54,6 @@ export enum QuestionType {
     mcq = 'MCQ',
     mmcq = 'MMCQ',
     sa = 'SA',
-    mtf = 'MTF'
+    mtf = 'MTF',
+    asq = 'ASQ'
 }

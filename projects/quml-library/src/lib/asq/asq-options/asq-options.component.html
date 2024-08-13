@@ -1,0 +1,18 @@
+<ng-container *ngIf="optionsShuffled && (layout === 'VERTICAL' || layout === 'DEFAULT')">
+  <div id="dragdropSpace" cdkDropList [cdkDropListData]="shuffledOptions" class="asq-horizontal-list" (cdkDropListDropped)="onDrop($event)">
+    <div class="asq-horizontal-box" *ngFor="let option of shuffledOptions" cdkDrag cdkDragBoundary="#dragdropSpace">
+      <div [innerHTML]="option.label"></div>
+      <quml-reorder></quml-reorder>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="optionsShuffled && (layout === 'HORIZONTAL')">
+  <div id="dragdropSpace" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="shuffledOptions" class="horizontal-list" (cdkDropListDropped)="onDrop($event)">
+    <div class="asq-vertical-box" *ngFor="let option of shuffledOptions" cdkDrag cdkDragBoundary="#dragdropSpace">
+      <div class="drag-handle">
+        <quml-reorder></quml-reorder>
+      </div>
+      <div [innerHTML]="option.label"></div>
+    </div>
+  </div>
+</ng-container>

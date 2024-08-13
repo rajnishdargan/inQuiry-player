@@ -46,6 +46,10 @@
                 <quml-mtf [shuffleOptions]='shuffleOptions' [question]='question' [replayed]="parentConfig?.isReplayed"
                 (optionsReordered)="handleMTFOptionsChange($event)" [tryAgain]="tryAgainClicked"></quml-mtf>
               </div>
+              <div *ngIf="question?.primaryCategory.toLowerCase() === 'arrange sequence question'" class="mtf">
+                <quml-asq [shuffleOptions]='shuffleOptions' [question]='question' [replayed]="parentConfig?.isReplayed"
+                (optionsReordered)="handleASQOptionsChange($event)" [tryAgain]="tryAgainClicked"></quml-asq>
+              </div>
             </div>
           </slide>
         </carousel>

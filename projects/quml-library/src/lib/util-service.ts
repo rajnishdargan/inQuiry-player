@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import * as _ from 'lodash-es';
 import { DEFAULT_SCORE } from './player-constants'
 import { MtfOptions } from './interfaces/mtf-interface';
+import {AsqOptions} from './interfaces/asq-interface';
 import { eventName, pageId, TelemetryType, Cardinality, QuestionType } from './telemetry-constants';
+
 @Injectable({
     providedIn: 'root'
 })
@@ -107,6 +109,38 @@ export class UtilService {
         return totalScore;
     }
 
+    getASQScore(
+        rearrangedOptions: AsqOptions[],
+        responseDeclaration,
+        isShuffleQuestions: boolean,
+        outcomeDeclaration,
+        selectedQuestion
+      ) {
+        let key: any = this.getKeyValue(Object.keys(responseDeclaration));
+        const correctResponse = responseDeclaration[key]['correctResponse']['value'];
+        const mapping = responseDeclaration[key]['mapping'];
+      
+        if (isShuffleQuestions) {
+          const scoreForEachMapping = _.round(outcomeDeclaration.maxScore.defaultValue / mapping.length, 2);
+          _.forEach(mapping, (map) => {
+            map.score = scoreForEachMapping;
+          });
+        }
+      
+        let totalScore = 0;
+        rearrangedOptions.forEach((option, index) => {
+          const correctIndex = correctResponse[index];
+          if (option.label === selectedQuestion.interactions.response1.options[correctIndex].label) {
+            const scoreMapping = mapping.find(map => map.value === index);
+            if (scoreMapping) {
+              totalScore += scoreMapping.score || 0;
+            }
+          }
+        });
+      
+        return totalScore;
+      }
+    
     hasDuplicates(selectedOptions, option) {
         let duplicate = selectedOptions.find((o) => { return o.value === option.value });
         return duplicate;

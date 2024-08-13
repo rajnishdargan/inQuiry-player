@@ -1,0 +1,9 @@
+<div *ngIf="questionBody" class="question-body">
+    <div class="mtf-title">
+      <p [innerHTML]="questionBody"></p>
+    </div>
+    <quml-asq-options [shuffleOptions]="shuffleOptions" [replayed]="replayed" [tryAgain]="tryAgain" *ngIf="interactions?.response1?.options"
+      [options]="interactions.response1.options" (reorderedOptions)="handleReorderedOptions($event)" [layout]="layout">
+    </quml-asq-options>
+</div>
+  

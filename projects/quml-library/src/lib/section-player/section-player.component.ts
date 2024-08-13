@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { QumlPlayerConfig, IParentConfig, IAttempts } from '../quml-library-interface';
 import { MtfOptions } from '../interfaces/mtf-interface';
+import { AsqOptions } from '../interfaces/asq-interface';
 import { ViewerService } from '../services/viewer-service/viewer-service';
 import { eventName, pageId, TelemetryType, Cardinality, QuestionType } from '../telemetry-constants';
 import { DEFAULT_SCORE, COMPATABILITY_LEVEL } from '../player-constants';
@@ -77,6 +78,7 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
   showSolution: any;
   optionSelectedObj: any;
   mtfReorderedOptionsMap: any;
+  asqReorderedOptionsMap:any;
   intervalRef: any;
   alertType: string;
   infoPopup: boolean;
@@ -384,6 +386,7 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
     this.showAlert = false;
     this.optionSelectedObj = undefined;
     this.mtfReorderedOptionsMap = undefined;
+    this.asqReorderedOptionsMap=undefined;
     this.currentOptionSelected = undefined;
     this.currentQuestion = undefined;
     this.currentOptions = undefined;
@@ -438,6 +441,19 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
         }
         this.prevSlide();
       }
+      if ((this.optionSelectedObj || this.asqReorderedOptionsMap) && this.showFeedBack) {
+        this.stopAutoNavigation = false;
+        this.validateQuestionInteraction('previous');
+      } else {
+        this.stopAutoNavigation = true;
+        if (this.currentSlideIndex === 0 && this.parentConfig.isSectionsAvailable && this.getCurrentSectionIndex() > 0) {
+          const previousSectionId = this.mainProgressBar[this.getCurrentSectionIndex() - 1].identifier;
+          this.jumpToSection(previousSectionId);
+          return;
+        }
+        this.prevSlide();
+      }
+
     }
   }
 
@@ -468,6 +484,13 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
     this.active = false;
     this.jumpSlideIndex = index;
     if ((this.optionSelectedObj || this.mtfReorderedOptionsMap) && this.showFeedBack) {
+      this.stopAutoNavigation = false;
+      this.validateQuestionInteraction('jump');
+    } else {
+      this.stopAutoNavigation = true;
+      this.goToSlide(this.jumpSlideIndex);
+    }
+    if ((this.optionSelectedObj || this.asqReorderedOptionsMap) && this.showFeedBack) {
       this.stopAutoNavigation = false;
       this.validateQuestionInteraction('jump');
     } else {
@@ -564,6 +587,26 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
       this.updateScoreBoard(currentIndex, 'skipped');
     } else {
       this.mtfReorderedOptionsMap = rearrangedOptions;
+      this.isAssessEventRaised = false;
+      this.currentSolutions = !_.isEmpty(currentQuestion.solutions) ? currentQuestion.solutions : undefined;
+    }
+    this.currentQuestionIndetifier = currentQuestion.identifier;
+    this.media = _.get(currentQuestion, 'media', []);
+    if (!this.showFeedBack) {
+      this.validateQuestionInteraction();
+    }
+  }
+
+  handleASQOptionsChange(rearrangedOptions: AsqOptions) {
+    this.focusOnNextButton();
+    this.active = true;
+    const currentIndex = this.myCarousel.getCurrentSlideIndex() - 1;
+    this.viewerService.raiseHeartBeatEvent(eventName.optionsReordered, TelemetryType.interact, this.myCarousel.getCurrentSlideIndex());
+    const currentQuestion = this.questions[currentIndex];
+    if (_.isEmpty(rearrangedOptions)) {
+      this.updateScoreBoard(currentIndex, 'skipped');
+    } else {
+      this.asqReorderedOptionsMap = rearrangedOptions;
       this.isAssessEventRaised = false;
       this.currentSolutions = !_.isEmpty(currentQuestion.solutions) ? currentQuestion.solutions : undefined;
     }
@@ -674,6 +717,8 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
     }
     if (
       (questionType === QuestionType.mtf && !this.mtfReorderedOptionsMap) ||
+      
+      (questionType === QuestionType.asq && !this.asqReorderedOptionsMap) ||
       ((questionType === QuestionType.mcq || questionType === QuestionType.mmcq) && !this.optionSelectedObj) &&
       this.allowSkip) {
         return true;
@@ -698,6 +743,11 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
     if (this.mtfReorderedOptionsMap && selectedQuestion.qType === QuestionType.mtf) {
       this.handleMTFInteraction(selectedQuestion, edataItem, currentIndex, type);
       this.mtfReorderedOptionsMap = undefined;
+    }
+    
+    if (this.asqReorderedOptionsMap && selectedQuestion.qType === QuestionType.asq) {
+     this.handleASQInteraction(selectedQuestion, edataItem, currentIndex, type);
+      this.asqReorderedOptionsMap = undefined;
     }
   }
 
@@ -735,6 +785,21 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
       this.handleCorrectAnswer(currentScore, edataItem, currentIndex, userResponse, type);
     }
   }
+
+  handleASQInteraction(selectedQuestion, edataItem, currentIndex, type) {
+    const responseDeclaration = selectedQuestion.responseDeclaration;
+    const outcomeDeclaration = selectedQuestion.outcomeDeclaration;
+    const userResponse = this.asqReorderedOptionsMap;
+  
+    const currentScore = this.utilService.getASQScore(userResponse, responseDeclaration, this.isShuffleQuestions, outcomeDeclaration,selectedQuestion);
+    if (currentScore === 0) {
+      this.handleWrongAnswer(currentScore, edataItem, currentIndex, userResponse, type);
+    } else {
+      this.handleCorrectAnswer(currentScore, edataItem, currentIndex, userResponse, type);
+    }
+  }
+
+ 
 
   handleCorrectAnswer(currentScore, edataItem: any, currentIndex: number, userResponse: any, type ?: string) {
     if (!this.isAssessEventRaised) {
@@ -819,6 +884,7 @@ export class SectionPlayerComponent implements OnChanges, AfterViewInit {
     if (index === 0) {
       this.optionSelectedObj = undefined;
       this.mtfReorderedOptionsMap = undefined;
+      this.asqReorderedOptionsMap = undefined;
       this.myCarousel.selectSlide(0);
       this.active = this.currentSlideIndex === 0 && this.sectionIndex === 0 && this.showStartPage;
       this.showRootInstruction = true;

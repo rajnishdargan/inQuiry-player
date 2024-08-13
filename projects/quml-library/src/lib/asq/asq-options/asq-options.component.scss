@@ -1,0 +1,112 @@
+.asq-horizontal-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+  border:1px solid #b3a8a869;
+  cursor: move;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+::ng-deep .asq-horizontal-box p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging .asq-horizontal-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+::ng-deep .asq-horizontal-box img
+{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+//horizontal layout css
+.horizontal-list {
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: nowrap; 
+  width: 100%; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.asq-vertical-box {
+  flex: 0 1 25%; 
+  max-width: 25%;
+  position:relative;
+  padding: 0px 15px;
+  border: solid 1px #ccccccab;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+  margin:10px;
+  border-radius: 4px;
+  min-height:150px;
+  margin-top:2%;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+::ng-deep .asq-vertical-box img
+{
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+::ng-deep .asq-vertical-box p{
+line-height: 20px;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.horizontal-list.cdk-drop-list-dragging .asq-vertical-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.centered-align{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+.drag-handle{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: move;
+}
+@media screen and (max-width: 600px) {
+::ng-deep .asq-vertical-box p {
+  line-height: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  padding: 7px;
+}
+.asq-vertical-box{
+  margin: 0% 1px 10px;
+  padding:0px;
+}
+.horizontal-list{
+  padding:0px;
+}
+}
