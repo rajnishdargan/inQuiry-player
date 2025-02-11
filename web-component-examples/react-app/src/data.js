@@ -1,67 +1,95 @@
-const sectionContent = {
-    "copyright": "sunbird",
-    "lastStatusChangedOn": "2023-12-22T04:16:50.242+0000",
-    "timeLimits": {
-        "questionSet": {
-            "max": 0,
-            "min": 0
+const content = {
+    "courseType": [
+        "Enablers"
+    ],
+    "assessmentType": "Post Test",
+    "previewUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/do_21423465065426124815_html_1737628412545.html",
+    "subject": [
+        "Data Computing/Data Entry"
+    ],
+    "channel": "scp-channel",
+    "downloadUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/test-questionset_1737628412224_do_21423465065426124815_1.ecar",
+    "language": [
+        "English"
+    ],
+    "program": [
+        "SCP"
+    ],
+    "mimeType": "application/vnd.sunbird.questionset",
+    "showHints": false,
+    "variants": {
+        "spine": {
+            "ecarUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/test-questionset_1737628411654_do_21423465065426124815_1_SPINE.ecar",
+            "size": "6679"
+        },
+        "online": {
+            "ecarUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/test-questionset_1737628411970_do_21423465065426124815_1_ONLINE.ecar",
+            "size": "3494"
+        },
+        "full": {
+            "ecarUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/test-questionset_1737628412224_do_21423465065426124815_1.ecar",
+            "size": "8214"
         }
     },
-    "author": "contentCreator",
+    "objectType": "QuestionSet",
+    "se_mediums": [
+        "Hindi"
+    ],
+    "gradeLevel": [
+        "Grade 10"
+    ],
+    "appIcon": "https://knowlg-public.s3-ap-south-1.amazonaws.com/questionset/do_21423465065426124815/artifact/sunbird.thumb.jpeg",
+    "primaryCategory": "Practice Question Set",
     "children": [
         {
-            "lastStatusChangedOn": "2023-12-22T04:16:50.190+0000",
+            "lastStatusChangedOn": "2025-01-23T10:33:06.699+0000",
             "timeLimits": {
                 "questionSet": {
                     "max": 0,
                     "min": 0
                 }
             },
-            "parent": "do_11395276467516211211",
+            "parent": "do_21423465065426124815",
             "children": [
                 {
-                    "copyright": "sunbird",
-                    "lastStatusChangedOn": "2023-12-22T04:17:26.313+0000",
-                    "parent": "do_11395276534294118411",
-                    "author": "contentCreator",
-                    "name": "Even",
-                    "createdOn": "2023-12-22T04:15:08.148+0000",
-                    "channel": "0137541424673095687",
+                    "lastStatusChangedOn": "2025-01-23T10:33:30.555+0000",
+                    "parent": "do_21423465095161446416",
+                    "author": "John",
+                    "name": "Capital",
+                    "createdOn": "2025-01-23T10:32:23.377+0000",
+                    "channel": "scp-channel",
                     "maxScore": 1,
-                    "lastUpdatedOn": "2023-12-22T04:17:26.313+0000",
+                    "lastUpdatedOn": "2025-01-23T10:33:30.555+0000",
                     "subject": [
-                        "Accountancy"
+                        "Data Computing/Data Entry"
                     ],
                     "showTimer": false,
-                    "identifier": "do_11395276601870745611",
+                    "identifier": "do_21423465138894438418",
                     "gradeLevel": [
-                        "Class 1"
+                        "Grade 10"
                     ],
                     "compatibilityLevel": 5,
-                    "audience": [
-                        "Administrator"
-                    ],
                     "se_boards": [
-                        "State(Tamil Nadu)"
+                        "NIOS - Rajasthan"
                     ],
                     "primaryCategory": "Multiple Choice Question",
                     "se_mediums": [
-                        "English"
+                        "Hindi"
                     ],
-                    "downloadUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276601870745611/even_1703218645713_do_11395276601870745611_1.ecar",
+                    "downloadUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/question/do_21423465138894438418/capital_1737628409372_do_21423465138894438418_1.ecar",
                     "se_subjects": [
-                        "Accountancy"
+                        "Data Computing/Data Entry"
                     ],
                     "medium": [
-                        "English"
+                        "Hindi"
                     ],
                     "interactionTypes": [
                         "choice"
                     ],
-                    "framework": "tn_k-12",
-                    "versionKey": "1703218508733",
+                    "framework": "scp-framework",
+                    "versionKey": "1737628343385",
                     "mimeType": "application/vnd.sunbird.question",
-                    "code": "8646c6d6-8443-42e7-86b0-01181a18b7ff",
+                    "code": "0d17f510-6820-4327-8fce-1c64399ef83c",
                     "license": "CC BY 4.0",
                     "qumlVersion": 1.1,
                     "prevStatus": "Draft",
@@ -70,138 +98,52 @@ const sectionContent = {
                     "language": [
                         "English"
                     ],
-                    "board": "State(Tamil Nadu)",
+                    "board": "NIOS - Rajasthan",
                     "showFeedback": false,
                     "objectType": "Question",
                     "status": "Live",
-                    "createdBy": "155ce3c5-713e-4749-bc1c-95d09c640914",
+                    "createdBy": "15155b7a-5316-4bb2-992a-772093e85f44",
                     "contentEncoding": "gzip",
                     "depth": 2,
-                    "lastPublishedBy": "469dc732-04f3-42d9-9a85-30957a797acc",
+                    "lastPublishedBy": "15155b7a-5316-4bb2-992a-772093e85f44",
                     "se_gradeLevels": [
-                        "Class 1"
+                        "Grade 10"
                     ],
                     "se_FWIds": [
-                        "tn_k-12"
+                        "scp-framework"
                     ],
                     "allowAnonymousAccess": "Yes",
                     "contentDisposition": "inline",
                     "schemaVersion": "1.1",
-                    "artifactUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276601870745611/do_11395276601870745611_1703218644890.zip",
-                    "complexityLevel": [
-                        "analyse"
-                    ],
-                    "visibility": "Parent",
+                    "artifactUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/question/do_21423465138894438418/do_21423465138894438418_1737628404123.zip",
+                    "visibility": "Default",
                     "qType": "MCQ",
                     "showSolutions": false,
                     "variants": {
                         "full": {
-                            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276601870745611/even_1703218645713_do_11395276601870745611_1.ecar",
-                            "size": "3016"
+                            "ecarUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/question/do_21423465138894438418/capital_1737628409372_do_21423465138894438418_1.ecar",
+                            "size": "2876"
                         },
                         "online": {
-                            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276601870745611/even_1703218645900_do_11395276601870745611_1_ONLINE.ecar",
-                            "size": "1451"
+                            "ecarUrl": "https://knowlg-public.s3-ap-south-1.amazonaws.com/question/do_21423465138894438418/capital_1737628409758_do_21423465138894438418_1_ONLINE.ecar",
+                            "size": "1379"
                         }
                     },
                     "index": 1,
-                    "pkgVersion": 1
-                },
-                {
-                    "copyright": "sunbird",
-                    "lastStatusChangedOn": "2023-12-22T04:17:26.866+0000",
-                    "parent": "do_11395276534294118411",
-                    "author": "contentCreator",
-                    "name": "PM",
-                    "createdOn": "2023-12-22T04:16:40.428+0000",
-                    "channel": "0137541424673095687",
-                    "maxScore": 1,
-                    "lastUpdatedOn": "2023-12-22T04:17:26.866+0000",
-                    "subject": [
-                        "Accountancy"
-                    ],
-                    "showTimer": false,
-                    "identifier": "do_11395276677466521611",
-                    "gradeLevel": [
-                        "Class 1"
-                    ],
-                    "compatibilityLevel": 5,
-                    "audience": [
-                        "Administrator"
-                    ],
-                    "se_boards": [
-                        "State(Tamil Nadu)"
-                    ],
-                    "primaryCategory": "Multiple Choice Question",
-                    "se_mediums": [
-                        "English"
-                    ],
-                    "downloadUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276677466521611/pm_1703218646537_do_11395276677466521611_1.ecar",
-                    "se_subjects": [
-                        "Accountancy"
-                    ],
-                    "medium": [
-                        "English"
-                    ],
-                    "interactionTypes": [
-                        "choice"
-                    ],
-                    "framework": "tn_k-12",
-                    "versionKey": "1703218600454",
-                    "mimeType": "application/vnd.sunbird.question",
-                    "code": "eea9e994-346b-4fd0-99d2-9a8490a67bb5",
-                    "license": "CC BY 4.0",
-                    "qumlVersion": 1.1,
-                    "prevStatus": "Draft",
-                    "showHints": false,
-                    "templateId": "mcq-vertical",
-                    "language": [
-                        "English"
-                    ],
-                    "board": "State(Tamil Nadu)",
-                    "showFeedback": false,
-                    "objectType": "Question",
-                    "status": "Live",
-                    "createdBy": "155ce3c5-713e-4749-bc1c-95d09c640914",
-                    "contentEncoding": "gzip",
-                    "depth": 2,
-                    "lastPublishedBy": "469dc732-04f3-42d9-9a85-30957a797acc",
-                    "se_gradeLevels": [
-                        "Class 1"
-                    ],
-                    "se_FWIds": [
-                        "tn_k-12"
-                    ],
-                    "allowAnonymousAccess": "Yes",
-                    "contentDisposition": "inline",
-                    "schemaVersion": "1.1",
-                    "artifactUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276677466521611/do_11395276677466521611_1703218646415.zip",
-                    "complexityLevel": [],
-                    "visibility": "Parent",
-                    "qType": "MCQ",
-                    "showSolutions": false,
-                    "variants": {
-                        "full": {
-                            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276677466521611/pm_1703218646537_do_11395276677466521611_1.ecar",
-                            "size": "3007"
-                        },
-                        "online": {
-                            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/question/do_11395276677466521611/pm_1703218646689_do_11395276677466521611_1_ONLINE.ecar",
-                            "size": "1445"
-                        }
-                    },
-                    "index": 2,
-                    "pkgVersion": 1
+                    "pkgVersion": 1,
+                    "languageCode": [
+                        "en"
+                    ]
                 }
             ],
             "name": "Section-1",
             "navigationMode": "non-linear",
-            "createdOn": "2023-12-22T04:13:45.656+0000",
-            "channel": "0137541424673095687",
+            "createdOn": "2025-01-23T10:31:29.992+0000",
+            "channel": "scp-channel",
             "generateDIALCodes": "No",
-            "lastUpdatedOn": "2023-12-22T04:16:50.190+0000",
+            "lastUpdatedOn": "2025-01-23T10:33:06.699+0000",
             "showTimer": false,
-            "identifier": "do_11395276534294118411",
+            "identifier": "do_21423465095161446416",
             "description": "Section-1",
             "containsUserData": "No",
             "allowSkip": "Yes",
@@ -217,9 +159,9 @@ const sectionContent = {
             ],
             "attributions": [],
             "scoreCutoffType": "AssessmentLevel",
-            "versionKey": "1703218425656",
+            "versionKey": "1737628289992",
             "mimeType": "application/vnd.sunbird.questionset",
-            "code": "a454255d-1ee0-48df-ae1b-66e69fcafea0",
+            "code": "0cfe929d-0503-4635-822c-4a59795f0b5b",
             "license": "CC BY 4.0",
             "qumlVersion": 1.1,
             "prevStatus": "Draft",
@@ -234,6 +176,7 @@ const sectionContent = {
             "shuffle": true,
             "contentEncoding": "gzip",
             "depth": 1,
+            "instructions": "<p>Test</p>",
             "allowAnonymousAccess": "Yes",
             "contentDisposition": "inline",
             "schemaVersion": "1.1",
@@ -243,157 +186,161 @@ const sectionContent = {
             "index": 1
         }
     ],
-    "name": "Sample QuestionSet V2",
-    "navigationMode": "non-linear",
-    "createdOn": "2023-12-22T04:12:24.845+0000",
-    "createdFor": [
-        "0137541424673095687"
-    ],
-    "channel": "0137541424673095687",
-    "pdfUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/do_11395276467516211211_pdf_1703218647645.pdf",
+    "contentEncoding": "gzip",
     "generateDIALCodes": "No",
-    "lastUpdatedOn": "2023-12-22T04:16:50.254+0000",
-    "subject": [
-        "Accountancy"
+    "se_gradeLevels": [
+        "Grade 10"
     ],
-    "size": 7123,
-    "showTimer": false,
-    "identifier": "do_11395276467516211211",
-    "description": "Sample QuestionSet V2",
-    "gradeLevel": [
-        "Class 1"
-    ],
-    "containsUserData": "No",
-    "allowSkip": "Yes",
-    "compatibilityLevel": 6,
-    "audience": [
-        "Administrator"
-    ],
+    "showSolutions": false,
     "trackable": {
         "enabled": "No",
         "autoBatch": "No"
     },
-    "se_boards": [
-        "State(Tamil Nadu)"
+    "identifier": "do_21423465065426124815",
+    "visibility": "Default",
+    "showTimer": false,
+    "author": "John",
+    "childNodes": [
+        "do_21423465138894438418",
+        "do_21423465095161446416"
     ],
-    "primaryCategory": "Practice Question Set",
-    "setType": "materialised",
-    "appIcon": "",
-    "se_mediums": [
-        "English"
+    "lastPublishedBy": "15155b7a-5316-4bb2-992a-772093e85f44",
+    "languageCode": [
+        "en"
     ],
-    "downloadUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/sample-questionset-v2_1703218647276_do_11395276467516211211_1.ecar",
     "se_subjects": [
-        "Accountancy"
+        "Data Computing/Data Entry"
     ],
-    "medium": [
-        "English"
-    ],
-    "attributions": [],
-    "scoreCutoffType": "AssessmentLevel",
-    "framework": "tn_k-12",
-    "versionKey": "1703218610254",
-    "mimeType": "application/vnd.sunbird.questionset",
-    "code": "38c8ed0e-fc76-4c5c-a161-e8908d70bd94",
     "license": "CC BY 4.0",
+    "size": 8214,
+    "lastPublishedOn": "2025-01-23T10:33:30.740+0000",
+    "name": "Test QuestionSet",
+    "allowBranching": "No",
+    "status": "Live",
+    "code": "f173cad0-bc98-4283-a03c-4e5e33b4a7e4",
+    "allowSkip": "Yes",
+    "containsUserData": "No",
     "qumlVersion": 1.1,
     "prevStatus": "Draft",
-    "showHints": false,
-    "summaryType": "Complete",
-    "language": [
-        "English"
+    "description": "Test QuestionSet",
+    "medium": [
+        "Hindi"
     ],
-    "board": "State(Tamil Nadu)",
-    "showFeedback": false,
-    "lastPublishedOn": "2023-12-22T04:17:26.925+0000",
-    "objectType": "QuestionSet",
-    "status": "Live",
-    "createdBy": "155ce3c5-713e-4749-bc1c-95d09c640914",
-    "requiresSubmit": "No",
-    "shuffle": true,
-    "contentEncoding": "gzip",
-    "depth": 0,
-    "consumerId": "bfe5883f-ac66-4744-a064-3ed88d986eba",
-    "lastPublishedBy": "469dc732-04f3-42d9-9a85-30957a797acc",
-    "se_gradeLevels": [
-        "Class 1"
+    "posterImage": "https://knowlg-public.s3-ap-south-1.amazonaws.com/content/assets/do_21423465157686886414/sunbird.jpeg",
+    "createdOn": "2025-01-23T10:30:53.698+0000",
+    "pdfUrl": "",
+    "se_boards": [
+        "NIOS - Rajasthan"
     ],
-    "se_FWIds": [
-        "tn_k-12"
-    ],
-    "allowAnonymousAccess": "Yes",
+    "scoreCutoffType": "AssessmentLevel",
     "contentDisposition": "inline",
+    "lastUpdatedOn": "2025-01-23T10:33:33.333+0000",
+    "allowAnonymousAccess": "Yes",
+    "lastStatusChangedOn": "2025-01-23T10:33:33.333+0000",
     "schemaVersion": "1.1",
-    "additionalCategories": [],
-    "allowBranching": "No",
-    "previewUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/do_11395276467516211211_html_1703218647645.html",
-    "childNodes": [
-        "do_11395276601870745611",
-        "do_11395276534294118411",
-        "do_11395276677466521611"
+    "requiresSubmit": "No",
+    "se_FWIds": [
+        "scp-framework"
     ],
-    "visibility": "Default",
-    "showSolutions": false,
-    "variants": {
-        "spine": {
-            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/sample-questionset-v2_1703218647008_do_11395276467516211211_1_SPINE.ecar",
-            "size": "3916"
-        },
-        "online": {
-            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/sample-questionset-v2_1703218647145_do_11395276467516211211_1_ONLINE.ecar",
-            "size": "3917"
-        },
-        "full": {
-            "ecarUrl": "https://sunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11395276467516211211/sample-questionset-v2_1703218647276_do_11395276467516211211_1.ecar",
-            "size": "7123"
+    "setType": "materialised",
+    "pkgVersion": 1,
+    "versionKey": "1737628386771",
+    "showFeedback": false,
+    "framework": "scp-framework",
+    "depth": 0,
+    "createdBy": "15155b7a-5316-4bb2-992a-772093e85f44",
+    "compatibilityLevel": 6,
+    "navigationMode": "non-linear",
+    "timeLimits": {
+        "questionSet": {
+            "max": 0,
+            "min": 0
         }
     },
-    "pkgVersion": 1,
-    "instructions": "<p>Sample QuestionSet V2</p>",
+    "shuffle": true,
+    "board": "NIOS - Rajasthan",
+    "instructions": null,
     "outcomeDeclaration": {
         "maxScore": {
             "cardinality": "single",
             "type": "integer",
-            "defaultValue": 2
+            "defaultValue": 1
         }
-    }
+    },
+    "level": 1,
+    "maxTime": null,
+    "maxAttempts": null,
+    "summaryType": null,
+    "maxQuestions": 1
 }
 export const playerConfig = {
     "context": {
-        "mode": "play",
-        "partner": [],
+        "user": {
+            "id": "15155b7a-5316-4bb2-992a-772093e85f44",
+            "fullName": "John Doe",
+            "firstName": "John",
+            "lastName": "Doe",
+            "orgIds": [
+                "scp-channel"
+            ]
+        },
+        "identifier": "do_21423465065426124815",
+        "sid": "0fb90b74-34d9-4018-8654-7d092d857b94",
+        "did": "1cc43bb3-432e-4b32-a042-ebbe9b641484",
+        "uid": "15155b7a-5316-4bb2-992a-772093e85f44",
+        "channel": "scp-channel",
         "pdata": {
-            "id": "dev.sunbird.portal",
-            "ver": "7.0.0",
-            "pid": "sunbird-portal"
+            "id": "pratham.admin.portal",
+            "ver": "1.0.0",
+            "pid": "pratham-portal.questionset_editor"
         },
-        "contentId": "do_11395276467516211211",
-        "sid": "b667b4e6-a4d5-4230-9609-9a4b97e87879",
-        "uid": "anonymous",
-        "timeDiff": -0.562,
-        "channel": "0138934136407244800",
-        "tags": [
-            "0138934136407244800"
-        ],
-        "did": "f4603b26b6d4491be363e9f8ade58231",
         "contextRollup": {
-            "l1": "0138934136407244800"
+            "l1": "scp-channel"
         },
+        "tags": [
+            "scp-channel"
+        ],
+        "cdata": [
+            {
+                "id": "scp-channel",
+                "type": "pratham-portal"
+            }
+        ],
+        "timeDiff": 5,
         "objectRollup": {},
-        "threshold": 3,
+        "host": "",
+        "defaultLicense": "CC BY 4.0",
+        "endpoint": "/data/v3/telemetry",
+        "env": "questionset_editor",
+        "framework": "scp-framework",
+        "cloudStorageUrls": [
+            "https://knowlg-public.s3.ap-south-1.amazonaws.com/"
+        ],
+        "labels": {
+            "save_collection_btn_label": "Save as Draft"
+        },
+        "correctionComments": false,
+        "sourcingResourceStatus": true,
+        "cloudStorage": {
+            "provider": "aws",
+            "presigned_headers": {}
+        },
         "userData": {
-            "firstName": "Guest",
-            "lastName": ""
-        }
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "mode": "play",
+        "threshold": 2
     },
-    "metadata": sectionContent,
     "config": {
         "traceId": "1234",
         "sideMenu": {
-            "showShare": true,
-            "showDownload": true,
+            "enable": false,
+            "showShare": false,
+            "showDownload": false,
             "showReplay": true,
-            "showExit": true,
+            "showExit": false
         },
+        "showDeviceOrientation": true
     }
-};
+}

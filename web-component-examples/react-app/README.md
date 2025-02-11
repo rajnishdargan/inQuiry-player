@@ -8,7 +8,7 @@ This guide assumes you already have a React project. If you want to create a new
 ### Step 1: Installing packages
 You can use the npm command-line tool to install packages.
 ```
-npm install --save @project-sunbird/sunbird-quml-player-web-component
+npm install --save @tekdi/sunbird-quml-player-web-component
 ```
 
 ### Step 2: Installing dependencies
@@ -53,8 +53,8 @@ import { useEffect, useRef } from "react";
 import "./App.css";
 
 + import $ from "jquery";
-+ import "@project-sunbird/sunbird-quml-player-web-component/styles.css";
-+ import "@project-sunbird/sunbird-quml-player-web-component/sunbird-quml-player.js";
++ import "@tekdi/sunbird-quml-player-web-component/styles.css";
++ import "@tekdi/sunbird-quml-player-web-component/sunbird-quml-player.js";
 
 
 function App() {
@@ -78,8 +78,8 @@ import { useEffect, useRef } from "react";
 import "./App.css";
 
 import $ from "jquery";
-import "@project-sunbird/sunbird-quml-player-web-component/styles.css";
-import "@project-sunbird/sunbird-quml-player-web-component/sunbird-quml-player.js";
+import "@tekdi/sunbird-quml-player-web-component/styles.css";
+import "@tekdi/sunbird-quml-player-web-component/sunbird-quml-player.js";
 
 
 function App() {
@@ -105,8 +105,8 @@ import { useEffect, useRef } from "react";
 import "./App.css";
 
 import $ from "jquery";
-import "@project-sunbird/sunbird-quml-player-web-component/styles.css";
-import "@project-sunbird/sunbird-quml-player-web-component/sunbird-quml-player.js";
+import "@tekdi/sunbird-quml-player-web-component/styles.css";
+import "@tekdi/sunbird-quml-player-web-component/sunbird-quml-player.js";
 
 + import { playerConfig } from "./data";
 
@@ -115,7 +115,7 @@ function App() {
   
   // Assign jQuery and questionListUrl to window object
    window.jQuery = $;
-+  window.questionListUrl = "https://dev.sunbirded.org/api/question/v2/list";
++  window.questionListUrl = "https://dev-middleware.prathamdigital.org/api/question/v2/list";
   
   return (
     <div className="App">
@@ -140,8 +140,8 @@ Import `useRef` hook and create player reference for output events from QuML pla
 import "./App.css";
 
 import $ from "jquery";
-import "@project-sunbird/sunbird-quml-player-web-component/styles.css";
-import "@project-sunbird/sunbird-quml-player-web-component/sunbird-quml-player.js";
+import "@tekdi/sunbird-quml-player-web-component/styles.css";
+import "@tekdi/sunbird-quml-player-web-component/sunbird-quml-player.js";
 
 import { playerConfig } from "./data";
 
@@ -151,7 +151,7 @@ function App() {
 
   // Assign jQuery and questionListUrl to window object
   window.jQuery = $;
-  window.questionListUrl = "https://dev.sunbirded.org/api/question/v2/list";
+  window.questionListUrl = "https://dev-middleware.prathamdigital.org/api/question/v2/list";
 
 +  useEffect(() => {
 +    const playerElement = sunbirdQumlPlayerRef.current;

@@ -841,7 +841,7 @@ export const mockSectionMTFQuestions = [{
           "id": "do_113952273632460800126",
           "type": "image",
           "src": "/assets/public/content/assets/do_113952273632460800126/test.png",
-          "baseUrl": "https://dev.sunbirded.org"
+          "baseUrl": "https://dev-middleware.prathamdigital.org"
       },
       {
           "id": "do_113952273902215168128",
@@ -849,7 +849,7 @@ export const mockSectionMTFQuestions = [{
           "type": "video",
           "assetId": "do_113952273902215168128",
           "name": "earth",
-          "baseUrl": "https://dev.sunbirded.org"
+          "baseUrl": "https://dev-middleware.prathamdigital.org"
       }
   ],
   "editorState": {

@@ -1,18 +1,18 @@
 {
   "/api/*": {
-    "target": "https://dev.sunbirded.org",
+    "target": "https://dev-middleware.prathamdigital.org",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
   },
   "/action/*": {
-    "target": "https://dev.sunbirded.org",
+    "target": "https://dev-middleware.prathamdigital.org",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
   },
   "/assets/*": {
-    "target": "https://dev.sunbirded.org",
+    "target": "https://dev-middleware.prathamdigital.org",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true

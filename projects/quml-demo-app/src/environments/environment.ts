@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://dev.sunbirded.org',
+  baseUrl: 'https://dev-middleware.prathamdigital.org',
 };
 
 /*

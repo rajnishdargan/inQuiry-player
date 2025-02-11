@@ -3,8 +3,8 @@ import "./App.css";
 import { playerConfig } from "./data";
 
 import $ from "jquery";
-import "@project-sunbird/sunbird-quml-player-web-component/styles.css";
-import "@project-sunbird/sunbird-quml-player-web-component/sunbird-quml-player.js";
+import "@tekdi/sunbird-quml-player-web-component/styles.css";
+import "@tekdi/sunbird-quml-player-web-component/sunbird-quml-player.js";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
   // Assign jQuery and questionListUrl to window object
   window.jQuery = $;
-  window.questionListUrl = "https://dev.sunbirded.org/api/question/v2/list";
+  window.questionListUrl = "https://dev-middleware.prathamdigital.org/api/question/v2/list";
 
   useEffect(() => {
     const playerElement = sunbirdQumlPlayerRef.current;
